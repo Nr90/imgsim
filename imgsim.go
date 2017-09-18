@@ -5,7 +5,7 @@ import (
 	"image"
 	"math/bits"
 
-	"resize"
+	"github.com/nfnt/resize"
 )
 
 // Hash is the type of the average hash. The average has is computed by setting the value of a bit
