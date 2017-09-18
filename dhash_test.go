@@ -26,7 +26,7 @@ func TestDifferenceHash(t *testing.T) {
 		args args
 		want Hash
 	}{
-		{"gopher image", args{img}, 71916854393169288},
+		{"gopher image", args{img}, 10233023882142496138},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {

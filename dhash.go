@@ -33,6 +33,7 @@ func calcDiffHash(img image.Image) Hash {
 			}
 
 			p = p << 1
+			left = r
 		}
 	}
 
