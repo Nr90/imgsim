@@ -35,6 +35,10 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	fmt.Println(imgsim.AverageHash(img))
+	hash := imgsim.AverageHash(img)
+	fmt.Println(hash)
 }
 ```
+
+# Notes #
+This library uses the math/bits package introduced in go 1.9. Since 1.9 is so new, the math/bits package is also vendored in this package.
