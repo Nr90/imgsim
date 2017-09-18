@@ -2,12 +2,20 @@
 #
 
 
-Imgsim is a library allows you to compute a fast average hash of an image. These hashes can then be used to compare images for similarity.
-
-# Average hash #
-An average hash is an example of a perceptual hash. Similar looking images will get similar perceptual hashes. Unlike cryptographic hashes
+Imgsim is a library allows you to compute a fast perceptual hashes of an image. These hashes can then be used to compare images for similarity.
+Similar looking images will get similar perceptual hashes. Unlike cryptographic hashes
 that would be very different for images with slight differences.
 This makes them suitable to compare how similar images are.
+
+# Average hash #
+An average hash is an example of a perceptual hash. 
+
+For an introduction see: [Average hash](http://www.hackerfactor.com/blog/?/archives/432-Looks-Like-It.html)
+
+# Difference hash #
+Difference hashes are said to be more resillient to changes in the image then the Average hash.
+
+For an introduction see: [Difference hash](http://www.hackerfactor.com/blog/index.php?/archives/529-Kind-of-Like-That.html)
 
 # Installation #
 
@@ -22,7 +30,7 @@ import (
 	"image/png"
 	"os"
 
-	"github.com/Nr90/imgsim
+	"github.com/Nr90/imgsim"
 )
 
 func main() {
@@ -35,8 +43,10 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	hash := imgsim.AverageHash(img)
-	fmt.Println(hash)
+	ahash := imgsim.AverageHash(img)
+	fmt.Println(ahash)
+	dhash := imgsim.DifferenceHash(img)
+	fmt.Println(dhash)
 }
 ```
 
