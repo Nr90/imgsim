@@ -49,6 +49,3 @@ func main() {
 	fmt.Println(dhash)
 }
 ```
-
-# Notes #
-This library uses the math/bits package introduced in go 1.9. Since 1.9 is so new, the math/bits package is also vendored in this package.
